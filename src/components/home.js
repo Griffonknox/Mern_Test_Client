@@ -15,7 +15,7 @@ export default function Home() {
 
      <Profile />
     
-    <Col xs={8}>
+    <Col xs={7}>
     <Alert variant="success" className="mt-3">
     <Alert.Heading>BloggerNauts</Alert.Heading>
     <p>
