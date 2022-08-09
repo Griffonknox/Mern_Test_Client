@@ -41,8 +41,8 @@ export default function CreateBlog() {
 //      window.alert(error);
 //      return;
 //    });
- 
-   setForm({ name: "", position: "", level: "" });
+    console.log(JSON.stringify(newBlog));
+   setForm({ userName: "", type: "", description: "" });
    navigate("/");
  }
  
@@ -59,7 +59,7 @@ export default function CreateBlog() {
 
         <Form onSubmit={onSubmit}>
 
-        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+        <Form.Group className="mb-3">
             <Form.Label>User Name</Form.Label>
             <Form.Control 
             size="md" 
@@ -70,11 +70,46 @@ export default function CreateBlog() {
              />
         </Form.Group>
 
-        {/* <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Example textarea</Form.Label>
-            <Form.Control as="textarea" rows={3} />
+        <Form.Check
+            inline
+            label="Technology"
+            name="blogType"
+            type="radio"
+            value="Technology"
+            checked={form.type === "Technology"}
+            onChange={(e) => updateForm({ type: e.target.value })}
+          />
+
+        <Form.Check
+            inline
+            label="Music"
+            name="blogType"
+            type="radio"
+            value="Music"
+            checked={form.type === "Music"}
+            onChange={(e) => updateForm({ type: e.target.value })}
+          />
+
+        <Form.Check
+            inline
+            label="Science"
+            name="blogType"
+            type="radio"
+            value="Science"
+            checked={form.type === "Science"}
+            onChange={(e) => updateForm({ type: e.target.value })}
+          />
+
+        <Form.Group className="mb-3">
+            <Form.Control 
+            as="textarea" 
+            rows={3}
+            size="sm" 
+            placeholder="Description"
+            value={form.description}
+            onChange={(e) => updateForm({ description: e.target.value })} 
+            />
         </Form.Group>
-         */}
 
         <Button variant="primary" type="submit">
             Submit

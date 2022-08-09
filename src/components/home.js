@@ -16,18 +16,18 @@ export default function Home() {
      <Profile />
     
     <Col xs={7}>
-    <Alert variant="success" className="mt-3">
-    <Alert.Heading>BloggerNauts</Alert.Heading>
-    <p>
-        Aww yeah, experimenting with some React developement along with the React-Bootstrap framework.
-        Lets experiment with creating a small project with full Crud commands and maybe even Authentication.
-    </p>
-    <hr />
-    <p className="mb-0">
-        Whenever you need to, be sure to use margin utilities to keep things
-        nice and tidy.
-    </p>
-    </Alert>
+        <Alert variant="success" className="mt-3">
+        <Alert.Heading>BloggerNauts</Alert.Heading>
+        <p>
+            Aww yeah, experimenting with some React developement along with the React-Bootstrap framework.
+            Lets experiment with creating a small project with full Crud commands and maybe even Authentication.
+        </p>
+        <hr />
+        <p className="mb-0">
+            Whenever you need to, be sure to use margin utilities to keep things
+            nice and tidy.
+        </p>
+        </Alert>
     </Col>
     </Row>
     </Container>
