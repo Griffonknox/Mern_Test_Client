@@ -10,6 +10,7 @@ import Edit from "./components/edit";
 import Create from "./components/create";
 import Home from "./components/home";
 import CreateBlog from "./components/createBlog";
+import BlogView from "./components/blogView";
  
 const App = () => {
  return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/edit/:id" element={<Edit />} />
         <Route path="/create" element={<Create />} />
         <Route path="/bg" element={<CreateBlog />} />
+        <Route path="/bg_view" element={<BlogView />} />
       </Routes>
    </div>
  );

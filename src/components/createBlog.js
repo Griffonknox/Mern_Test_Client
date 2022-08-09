@@ -73,6 +73,7 @@ export default function CreateBlog() {
             inline
             label="Technology"
             name="blogType"
+            required
             type="radio"
             value="Technology"
             checked={form.type === "Technology"}
@@ -83,6 +84,7 @@ export default function CreateBlog() {
             inline
             label="Music"
             name="blogType"
+            required
             type="radio"
             value="Music"
             checked={form.type === "Music"}
@@ -93,6 +95,7 @@ export default function CreateBlog() {
             inline
             label="Science"
             name="blogType"
+            required
             type="radio"
             value="Science"
             checked={form.type === "Science"}
