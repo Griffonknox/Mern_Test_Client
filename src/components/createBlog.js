@@ -30,18 +30,17 @@ export default function CreateBlog() {
    // When a post request is sent to the create url, we'll add a new record to the database.
    const newBlog = { ...form };
  
-//    await fetch("http://localhost:5000/blog/add", {
-//      method: "POST",
-//      headers: {
-//        "Content-Type": "application/json",
-//      },
-//      body: JSON.stringify(newBlog),
-//    })
-//    .catch(error => {
-//      window.alert(error);
-//      return;
-//    });
-    console.log(JSON.stringify(newBlog));
+   await fetch("http://localhost:5000/blog/add", {
+     method: "POST",
+     headers: {
+       "Content-Type": "application/json",
+     },
+     body: JSON.stringify(newBlog),
+   })
+   .catch(error => {
+     window.alert(error);
+     return;
+   });
    setForm({ userName: "", type: "", description: "" });
    navigate("/");
  }
